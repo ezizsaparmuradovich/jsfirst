@@ -21,4 +21,3 @@ let a1 = prompt("Введите обязательную статью расхо
 appDate.expenses.a1 = a2;
 appDate.expenses.a1 = a2;
 
-alert(appDate.budget/30)
