@@ -29,10 +29,12 @@ function chooseExpenses() {
     }
 } chooseExpenses();
 
-function getMoneyOneDay(){ //бюджет на один день
+function detectDayBudget(){ //бюджет на один день
     appDate.moneyOneDay = parseInt((appDate.budget/30).toFixed(2));
     alert("Бюджет на 1 день составляет " + appDate.moneyOneDay + " руб.");
+} detectDayBudget();
 
+function detectLevel() {
     if(appDate.moneyOneDay < 100){
         console.log("Мнимальный уровень достатка!");
     }else if(appDate.moneyOneDay>100 && appDate.moneyOneDay<2000){
@@ -42,14 +44,24 @@ function getMoneyOneDay(){ //бюджет на один день
     }else{
         console.log("Призашла какая-то ошибочка!");
     }
-} getMoneyOneDay();
+} detectLevel();
 
 function chekSavings(){
     if(appDate.savings){
         let save = +prompt("Какова сумма накопления?", ""),
             percent = +prompt("Под какой процент?");
         
-        appDate.monthIncome = (save/100/12*percent).toFixed(2); // прибыль в месяц
-        alert("Доход в месяц с вашего депозита составляет: " + parseInt((appDate.monthIncome)));
+        appDate.monthIncome = parseInt((save/100/12*percent).toFixed(2)); // прибыль в месяц
+        alert("Доход в месяц с вашего депозита составляет: " + (appDate.monthIncome));
     }
 } chekSavings();
+
+function chooseOptExpenses(){  //функц. для определения необязательных расходов
+    let a = prompt("Статья необязательных расходов?", ""),
+        b = prompt("Статья необязательных расходов?", ""),
+        c = prompt("Статья необязательных расходов?", "");
+
+    appDate.optionalExpenses["1"] = a;
+    appDate.optionalExpenses["2"] = b;
+    appDate.optionalExpenses["3"] = c;
+} chooseOptExpenses();
