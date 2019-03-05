@@ -57,11 +57,9 @@ function chekSavings(){
 } chekSavings();
 
 function chooseOptExpenses(){  //функц. для определения необязательных расходов
-    let a = prompt("Статья необязательных расходов?", ""),
-        b = prompt("Статья необязательных расходов?", ""),
-        c = prompt("Статья необязательных расходов?", "");
-
-    appDate.optionalExpenses["1"] = a;
-    appDate.optionalExpenses["2"] = b;
-    appDate.optionalExpenses["3"] = c;
+    for(let i=1; i<=3; i++){
+        let questionOptExpenses = prompt("Статья необязательных расходов?", "");
+        appData.optionalExpenses[i] = questionOptExpenses;
+    }
+       
 } chooseOptExpenses();
