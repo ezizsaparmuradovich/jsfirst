@@ -20,7 +20,8 @@ for(let i=0; i<2; i++){
         appDate.expenses[a] = b;
         console.log("done");
     }else{
-        i=0;
+        console.log ("bad result");
+        i--;
     }
 }
 // let i=0;
@@ -48,7 +49,7 @@ for(let i=0; i<2; i++){
 //     i++;
 // } while (i<2);
 appDate.moneyOneDay = appDate.budget/30;
-console.log(appDate.moneyOneDay);
+console.log("Бюджет на 1 день составляет " + appDate.moneyOneDay + "руб.");
 
 if(appDate.moneyOneDay < 100){
     console.log("Мнимальный уровень достатка!");
