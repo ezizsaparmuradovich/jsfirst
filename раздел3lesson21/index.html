@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  li {
+    border: 1px solid green;
+  }
+</style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="animate">Animate</button>
+  <div class="borders">
+    <div id="box"></div>
+  </div>
+   <div class="box">
+     <button>btn1</button>
+     <button>btn2</button>
+     <button>btn3</button>
+     <button class="ddd">btn4</button>
+     <button>btn5</button>
+     <button>btn6</button>
+     <button class="ddd">btn7</button>
+     <button>btn8</button>
+     <button>btn9</button>
+     <button class="ddd">btn10</button>
+   </div>
+
+   <ul id="parent-list">
+    <li id="post-1">Item 1</li>
+    <li id="post-2">Item 2</li>
+    <li id="post-3">Item 3</li>
+    <li id="post-4">Item 4</li>
+    <li id="post-5">Item 5</li>
+    <li id="post-6">Item 6</li>
+   </ul>
+
+
+<ul onclick="alert(event.target)">
+  <li>Млекопетающие
+    <ul>
+      <li>Коровы</li>
+      <li>Ослы</li>
+      <li>Собаки</li>
+      <li>Тигры</li>
+    </ul>
+  </li>
+</ul>
+   <script src="script.js"></script> 
+</body>
+</html>
